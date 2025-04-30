@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Астрономическая Викторина</title>
+    <style>
+        body {
+            background: url('https://get.wallhere.com/photo/stars-space-galaxy-1190112.jpg') no-repeat center center/cover;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button, .nav-link {
+            padding: 10px 20px;
+            font-size: 10px;
+            border: none;
+            background-color: #5c6bc0;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        #cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 90px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.8s;
+        }
+
+        .card.flip {
+            transform: rotate(180deg);
+        }
+
+        .card-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .front {
+            background-color: #3949ab;
+            border-radius: 10px;
+        }
+
+        .back {
+            background-color: #1e88e5;
+            border-radius: 10px;
+            transform: rotateY(180deg);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #result {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+        
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #DA70D6;
+    color: #333;
+  }
+
+  tr {
+    background-color: #4B0082;
+  }
+  .photo {
+  width: 300px;
+  height: 200px;
+  background-image: url('class.jpg');
+  background-size: cover;
+  background-position: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Астрономия</h1>
+        <h5>Жұлдыз дегеніміз – сутегі мен гелийден тұратын, термоядролық реакция жүруі негізінде айналасына тұрақты түрде энергия бөлетін плазмалық, шар тәріздес аспан денесі. Жұлдыздарды жарқырауы, беттік температурасы, радиусы, химиялық құрамы және массасы секілді шамалар арқылы сипаттауға болады. Барлық жұлдызды Күннің бірліктері негізінде салыстырмалы түрде сипатталады. </h5>
+    <table>
+        <tr>
+            <th>астрономиялық бірліктері</th>
+            <th>сандық мәні</th>
+            <th>қолданылуы</th>
+        </tr>
+        <tr>
+            <td>парсек</td>
+            <td> 1 парсек = 3,09 ∙ 1016 м = 206265 а.б. = 3,26 ж.ж.</td>
+            <td>параллакс бұрышы 1 с тең болғандағы қашықтық және жұлдыздарға дейінгі арақашықтық</td>
+        </tr>
+        <tr>
+            <td>жарық жылы</td>
+            <td>1 жарық жылы = 9,46 ∙ 1015 м</td>
+            <td>жұлдыздарға дейінгі арақашықтық</td>
+        </tr>
+        <tr>
+            <td>астрономиялық бірлік</td>
+            <td>1 а.б. = 150 млн км = 1,5 ∙ 1011 м</td>
+            <td>планеталарға дейінгі арақашықтық</td>
+        </tr>
+    </table>
+    <h2>Жұлдыздардың классификациясы</h2>
+    <img src="https://pm1.aminoapps.com/7662/58afeb48be7ef683474a39e0a49d54f3a038cf2er1-1010-224v2_hq.jpg" width="300" height="100"></img>
+    <h5>ХХ ғасырдың басында Герцшпрунг және Рассел жұлдыздарды абсолютті жұлдыздық шамасы бойынша жіктеп, спектральдық кластарға жіктеп, диаграмма жасады. Бұл диаграмма Герцшпрунг-Рассел диаграммасы деп аталады. Бұл диаграммада жұлдыздарды спектрлік кластар бойынша жіктеп, реттілікпен орналастырды. Астрономияда спектрлік кластарды әріптермен белгілеу қабылданған. Төмендегі 2-кестеде спектрлік кластар берілген.</h5>
+    <table>
+        <tr>
+            <th>Класс</th>
+            <th>Түсі</th>
+            <th>Температурасы (K)</th>
+            <th>Мысал</th>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>Көк</td>
+            <td>30 000+</td>
+            <td>Зета Пуппис</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>Көк-ақ</td>
+            <td>10 000 – 30 000</td>
+            <td>Ригель</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Ақ</td>
+            <td>7 500 – 10 000</td>
+            <td>Сириус</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>Ақ-сары</td>
+            <td>6 000 – 7 500</td>
+            <td>Процион</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>Сары</td>
+            <td>5 200 – 6 000</td>
+            <td>Күн</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>Қызғылт сары</td>
+            <td>3 700 – 5 200</td>
+            <td>Арктур</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>Қызыл</td>
+            <td>2 400 – 3 700</td>
+            <td>Бетельгейзе</td>
+        </tr>
+    </table>
+    <h5>Герцшпрунг-Рассел диаграммасы астрономияда «түс-жарықтылық» диаграммасы ретінде белгілі. Бұл диаграммада жұлдыздардың эволюциясына сай әртүрлі топтардағы жұлдыздар орналасқан. Герцшпрунг-Рассел диаграммасын қысқаша Г-Р диаграммасы деп атайды.</h5>
+    <img src="https://qpotok.ru/images/fizika/diagrammy-gercshprunga-rassela-posledovatelnost.png" width="400" height="300"></img>
+        <a href="stars.html" class="nav-link">Жұлдыздар әлемі</a>
+        <button id="startBtn">Начать игру</button>
+
+        <div id="gameArea" class="hidden">
+            <div id="cardContainer"></div>
+            <button id="finishBtn" class="hidden">Завершить</button>
+        </div>
+
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const finishBtn = document.getElementById('finishBtn');
+        const gameArea = document.getElementById('gameArea');
+        const cardContainer = document.getElementById('cardContainer');
+        const result = document.getElementById('result');
+
+        const questions = [
+            { question: "парсек дегеніміз", answer: "параллакс бұрышы 1 с тең болғандағы қашықтық" },
+            { question: "Арктур Сириусқа қарағанда қандай?", answer: "салқын" },
+            { question: "Альдебаранның абсолют жұлдыздық шамасы Спикаға қарағанда қандай?", answer: "төмен" },
+            { question: "қай жұлдыздың температурасы жоғары?", answer: "ригель" },
+            { question: "біздің галактика қалай аталады?", answer: "құс жолы" },
+            { question: "температурасы ең жоғары спектрлік класс?", answer: "О" }
+        ];
+
+        let correctAnswers = 0;
+
+        startBtn.addEventListener('click', () => {
+            startBtn.classList.add('hidden');
+            gameArea.classList.remove('hidden');
+            loadCards();
+        });
+
+        function loadCards() {
+            questions.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-content front">Вопрос ${index + 1}</div>
+                    <div class="card-content back">${q.question}</div>
+                `;
+                card.addEventListener('click', () => handleCardClick(card, q));
+                cardContainer.appendChild(card);
+            });
+        }
+
+        function handleCardClick(card, questionObj) {
+            card.classList.add('flip');
+            setTimeout(() => {
+                const userAnswer = prompt(questionObj.question);
+                if (userAnswer && userAnswer.trim().toLowerCase() === questionObj.answer.toLowerCase()) {
+                    correctAnswers++;
+                    alert('Правильно!');
+                } else {
+                    alert(`Неправильно! Правильный ответ: ${questionObj.answer}`);
+                }
+                card.style.pointerEvents = 'none';
+                if ([...document.querySelectorAll('.card')].every(c => c.style.pointerEvents === 'none')) {
+                    finishBtn.classList.remove('hidden');
+                }
+            }, 600);
+        }
+
+        finishBtn.addEventListener('click', () => {
+            gameArea.classList.add('hidden');
+            result.classList.remove('hidden');
+            result.innerHTML = `<h2>Вы ответили правильно на ${correctAnswers} из ${questions.length} вопросов!</h2>`;
+        });
+    </script>
+</body>
+</html>
